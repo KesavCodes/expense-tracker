@@ -6,8 +6,9 @@ const ExpenseList = ({ expenseData }) => {
     <View style={styles.listContainer}>
       <FlatList
         data={expenseData}
-        keyExtractor={expenseData.title}
+        keyExtractor={expenseData.id}
         renderItem={({ item }) => <ExpenseContainer expenseItem={item} />}
+        bounces={false}
       />
     </View>
   );
